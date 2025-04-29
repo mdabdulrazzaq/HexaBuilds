@@ -1,28 +1,18 @@
-name: Build and Deploy
+name: Deploy to GitHub Pages
+
 on:
   push:
     branches:
-      - master
-      - main
-permissions:
-  contents: write
+      - main  # or 'master' if using older repo
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup HTML Deployment 🔧
-        run: |
-          # If your entry file is not index.html, rename it
-          mv your-file.html index.html
-          # Create .nojekyll to bypass Jekyll processing
-          touch .nojekyll
-          # Optional: Create a 404.html if needed
-          echo "<h1>Page Not Found</h1>" > 404.html
-
-      - name: Deploy to GitHub Pages 🚀
+      - name: Deploy to GH Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
