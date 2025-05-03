@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hexa Builds - Project Consultants & Designers</title>
+    <title>Hexa Builds - Premium Project Supervision & Consulting</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -144,7 +144,7 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
             display: flex;
             align-items: center;
             color: var(--white);
@@ -239,6 +239,7 @@
         .about-img img {
             border-radius: 10px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            filter: brightness(1.05) contrast(1.05);
         }
         
         .about-img:before {
@@ -271,27 +272,37 @@
             color: var(--light-text);
         }
         
-        .stats {
-            display: flex;
+        .supervision-process {
             margin-top: 40px;
-            gap: 30px;
         }
         
-        .stat-item {
-            text-align: center;
+        .process-item {
+            display: flex;
+            margin-bottom: 25px;
         }
         
-        .stat-item h4 {
-            font-size: 42px;
-            color: var(--accent);
+        .process-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+            color: var(--white);
+            font-size: 24px;
+        }
+        
+        .process-text h4 {
+            font-size: 20px;
             margin-bottom: 5px;
         }
         
-        .stat-item p {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .process-text p {
             color: var(--light-text);
+            font-size: 15px;
         }
         
         /* Services Section */
@@ -322,6 +333,7 @@
             transition: var(--transition);
             opacity: 0;
             transform: translateY(30px);
+            position: relative;
         }
         
         .service-card:hover {
@@ -338,14 +350,26 @@
             height: 100%;
             object-fit: cover;
             transition: var(--transition);
+            filter: brightness(0.9);
         }
         
         .service-card:hover .service-img img {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
         
         .service-content {
             padding: 30px;
+            position: relative;
+        }
+        
+        .service-number {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 60px;
+            font-weight: 700;
+            color: rgba(0, 0, 0, 0.05);
+            font-family: 'Playfair Display', serif;
         }
         
         .service-content h3 {
@@ -358,6 +382,21 @@
             color: var(--light-text);
             margin-bottom: 20px;
             line-height: 1.6;
+        }
+        
+        .service-features {
+            margin-bottom: 20px;
+        }
+        
+        .service-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .service-feature i {
+            color: var(--accent);
+            margin-right: 10px;
         }
         
         .service-link {
@@ -375,6 +414,72 @@
         
         .service-link:hover i {
             transform: translateX(5px);
+        }
+        
+        /* Value Section */
+        .value-section {
+            background-color: #f9f9f9;
+        }
+        
+        .value-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .value-text {
+            flex: 1;
+        }
+        
+        .value-text h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .value-text p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: var(--light-text);
+        }
+        
+        .value-list {
+            margin-top: 30px;
+        }
+        
+        .value-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .value-item i {
+            color: var(--accent);
+            font-size: 20px;
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+        
+        .value-img {
+            flex: 1;
+            position: relative;
+        }
+        
+        .value-img img {
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            filter: brightness(1.05) contrast(1.05);
+        }
+        
+        .value-img:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 5px solid var(--accent);
+            border-radius: 10px;
+            bottom: -20px;
+            right: -20px;
+            z-index: -1;
         }
         
         /* Projects Section */
@@ -412,7 +517,7 @@
             position: relative;
             border-radius: 10px;
             overflow: hidden;
-            height: 300px;
+            height: 400px;
             opacity: 0;
             transform: scale(0.9);
         }
@@ -427,6 +532,12 @@
             height: 100%;
             object-fit: cover;
             transition: var(--transition);
+            filter: brightness(0.95);
+        }
+        
+        .project-card:hover .project-img img {
+            transform: scale(1.05);
+            filter: brightness(1);
         }
         
         .project-overlay {
@@ -446,10 +557,6 @@
         
         .project-card:hover .project-overlay {
             opacity: 1;
-        }
-        
-        .project-card:hover .project-img img {
-            transform: scale(1.1);
         }
         
         .project-overlay h3 {
@@ -563,7 +670,7 @@
         
         /* Contact Section */
         .contact {
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
             color: var(--white);
         }
         
@@ -788,11 +895,11 @@
                 font-size: 48px;
             }
             
-            .about-content {
+            .about-content, .value-content {
                 flex-direction: column;
             }
             
-            .about-img, .about-text {
+            .about-img, .about-text, .value-img, .value-text {
                 transform: none !important;
             }
             
@@ -802,6 +909,11 @@
             
             .contact-info, .contact-form {
                 transform: none !important;
+            }
+            
+            .value-img:before {
+                bottom: -10px;
+                right: -10px;
             }
         }
         
@@ -858,6 +970,10 @@
             .projects-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .project-card {
+                height: 300px;
+            }
         }
     </style>
 </head>
@@ -871,6 +987,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#value">Our Value</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -885,11 +1002,11 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>Building Dreams, Crafting Realities</h1>
-                <p>Hexa Builds is a premier project consulting and design firm based in Dubai, delivering innovative solutions that transform visions into exceptional built environments.</p>
+                <h1>Expert Project Supervision & Consulting</h1>
+                <p>Hexa Builds provides professional project supervision services in Dubai, ensuring your construction projects are completed on time, within budget, and to the highest quality standards through expert contractor oversight.</p>
                 <div>
-                    <a href="#contact" class="btn">Get Started</a>
-                    <a href="#projects" class="btn btn-outline">Our Projects</a>
+                    <a href="#contact" class="btn">Get a Consultation</a>
+                    <a href="#services" class="btn btn-outline">Our Services</a>
                 </div>
             </div>
         </div>
@@ -899,29 +1016,45 @@
     <section class="section" id="about">
         <div class="container">
             <div class="section-title">
-                <h2>About Hexa Builds</h2>
-                <p>We are a team of passionate professionals dedicated to excellence in every project we undertake.</p>
+                <h2>About Our Supervision Services</h2>
+                <p>We bridge the gap between project owners and contractors, ensuring seamless execution of construction projects.</p>
             </div>
             <div class="about-content">
                 <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="About Hexa Builds">
+                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Construction Supervision">
                 </div>
                 <div class="about-text">
-                    <h3>Your Trusted Partner in Construction & Design</h3>
-                    <p>Founded in Dubai, Hexa Builds has quickly established itself as a leader in project consulting and design. Our multidisciplinary approach combines innovative thinking with practical solutions to deliver outstanding results.</p>
-                    <p>We specialize in turning complex challenges into elegant solutions, ensuring every project meets the highest standards of quality, functionality, and aesthetic appeal.</p>
-                    <div class="stats">
-                        <div class="stat-item">
-                            <h4>50+</h4>
-                            <p>Projects</p>
+                    <h3>Your Trusted Project Supervisors</h3>
+                    <p>Hexa Builds specializes in construction project supervision, acting as the owner's representative to oversee contractors and ensure project success. Our team of experienced professionals brings technical expertise and management skills to every project.</p>
+                    <p>We serve as the critical link between project stakeholders, maintaining clear communication, enforcing quality standards, and keeping projects on track from groundbreaking to completion.</p>
+                    
+                    <div class="supervision-process">
+                        <div class="process-item">
+                            <div class="process-icon">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <div class="process-text">
+                                <h4>Contractor Oversight</h4>
+                                <p>Daily monitoring of contractor performance and compliance</p>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <h4>15+</h4>
-                            <p>Clients</p>
+                        <div class="process-item">
+                            <div class="process-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="process-text">
+                                <h4>Progress Tracking</h4>
+                                <p>Detailed reporting on project milestones and timelines</p>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <h4>10+</h4>
-                            <p>Awards</p>
+                        <div class="process-item">
+                            <div class="process-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="process-text">
+                                <h4>Quality Assurance</h4>
+                                <p>Rigorous inspections to ensure work meets specifications</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -933,49 +1066,153 @@
     <section class="section services" id="services">
         <div class="container">
             <div class="section-title">
-                <h2>Our Services</h2>
-                <p>Comprehensive solutions tailored to meet your project needs from conception to completion.</p>
+                <h2>Our Supervision Services</h2>
+                <p>Comprehensive contractor oversight solutions tailored to your project needs.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Architectural Design">
+                        <img src="https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Construction Supervision">
                     </div>
                     <div class="service-content">
-                        <h3>Architectural Design</h3>
-                        <p>Innovative architectural solutions that blend form and function, creating spaces that inspire and endure.</p>
-                        <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        <div class="service-number">01</div>
+                        <h3>Construction Supervision</h3>
+                        <p>Full-time on-site supervision to monitor contractor workmanship, progress, and adherence to project specifications.</p>
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Daily site inspections</span>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Work quality verification</span>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Safety compliance monitoring</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="service-link">Request Service <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="service-card delay-1">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a9e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Project Management">
+                        <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Project Management">
                     </div>
                     <div class="service-content">
+                        <div class="service-number">02</div>
                         <h3>Project Management</h3>
-                        <p>End-to-end project oversight ensuring timely delivery, budget adherence, and quality control.</p>
-                        <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        <p>Comprehensive oversight of project timelines, budgets, and contractor coordination to ensure successful delivery.</p>
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Schedule monitoring</span>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Budget control</span>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Stakeholder coordination</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="service-link">Request Service <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="service-card delay-2">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Interior Design">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Quality Control">
                     </div>
                     <div class="service-content">
-                        <h3>Interior Design</h3>
-                        <p>Creating harmonious interior environments that reflect your style while optimizing space and functionality.</p>
-                        <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        <div class="service-number">03</div>
+                        <h3>Quality Control</h3>
+                        <p>Systematic quality assurance processes to verify contractor work meets project standards and specifications.</p>
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Material inspections</span>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Workmanship evaluations</span>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Defect identification</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="service-link">Request Service <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="service-card delay-3">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Construction Consulting">
+                        <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Contract Administration">
                     </div>
                     <div class="service-content">
-                        <h3>Construction Consulting</h3>
-                        <p>Expert guidance through every phase of construction to maximize efficiency and minimize risks.</p>
-                        <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        <div class="service-number">04</div>
+                        <h3>Contract Administration</h3>
+                        <p>Professional management of contract terms between owner and contractors to protect your interests.</p>
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Change order management</span>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Payment certification</span>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Dispute resolution</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="service-link">Request Service <i class="fas fa-arrow-right"></i></a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Section -->
+    <section class="section value-section" id="value">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Value Proposition</h2>
+                <p>Why choose Hexa Builds as your project supervision partner</p>
+            </div>
+            <div class="value-content">
+                <div class="value-text">
+                    <h3>Maximizing Your Project Success</h3>
+                    <p>Our supervision services provide owners with peace of mind, knowing that an experienced professional is overseeing their construction project and protecting their interests.</p>
+                    <p>We bring objectivity, expertise, and dedicated focus to ensure contractors deliver as promised, while providing you with transparent reporting and professional guidance.</p>
+                    
+                    <div class="value-list">
+                        <div class="value-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Risk Mitigation</h4>
+                                <p>Early identification of potential issues before they become costly problems</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Cost Control</h4>
+                                <p>Prevention of unnecessary change orders and budget overruns</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Quality Assurance</h4>
+                                <p>Ensuring workmanship and materials meet project specifications</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="value-img">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Construction Supervision Value">
                 </div>
             </div>
         </div>
@@ -985,8 +1222,8 @@
     <section class="section" id="projects">
         <div class="container">
             <div class="section-title">
-                <h2>Our Projects</h2>
-                <p>Explore our portfolio of completed projects that showcase our expertise and attention to detail.</p>
+                <h2>Supervised Projects</h2>
+                <p>Our team has successfully supervised diverse construction projects across Dubai.</p>
             </div>
             <div class="projects-filter">
                 <button class="filter-btn active" data-filter="all">All</button>
@@ -997,56 +1234,56 @@
             <div class="projects-grid">
                 <div class="project-card" data-category="residential">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Luxury Villa">
+                        <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Luxury Villa">
                     </div>
                     <div class="project-overlay">
                         <h3>Al Barsha Luxury Villa</h3>
-                        <p>Modern villa with panoramic views and sustainable features</p>
+                        <p>Supervised construction of 12,000 sqft luxury residence</p>
                     </div>
                 </div>
                 <div class="project-card delay-1" data-category="commercial">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Office Tower">
+                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Office Tower">
                     </div>
                     <div class="project-overlay">
                         <h3>DIFC Office Tower</h3>
-                        <p>48-story commercial tower with smart building technology</p>
+                        <p>Provided full-time supervision for 48-story commercial tower</p>
                     </div>
                 </div>
                 <div class="project-card delay-2" data-category="hospitality">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Beach Resort">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Beach Resort">
                     </div>
                     <div class="project-overlay">
                         <h3>Palm Jumeirah Resort</h3>
-                        <p>5-star beachfront resort with 120 luxury suites</p>
+                        <p>Oversaw construction of 5-star beachfront property</p>
                     </div>
                 </div>
                 <div class="project-card delay-3" data-category="residential">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Townhouses">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Townhouses">
                     </div>
                     <div class="project-overlay">
                         <h3>Downtown Townhouses</h3>
-                        <p>Contemporary urban living in the heart of Dubai</p>
+                        <p>Supervised construction of 25 luxury urban residences</p>
                     </div>
                 </div>
                 <div class="project-card" data-category="commercial">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Retail Complex">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Retail Complex">
                     </div>
                     <div class="project-overlay">
                         <h3>Marina Retail Complex</h3>
-                        <p>Mixed-use development with retail and dining spaces</p>
+                        <p>Provided quality control for mixed-use development</p>
                     </div>
                 </div>
                 <div class="project-card delay-1" data-category="hospitality">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Desert Hotel">
+                        <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Desert Hotel">
                     </div>
                     <div class="project-overlay">
                         <h3>Desert Oasis Hotel</h3>
-                        <p>Luxury eco-friendly resort blending with desert landscape</p>
+                        <p>Supervised construction of luxury eco-friendly resort</p>
                     </div>
                 </div>
             </div>
@@ -1058,17 +1295,17 @@
         <div class="container">
             <div class="section-title">
                 <h2>Client Testimonials</h2>
-                <p>What our clients say about working with Hexa Builds.</p>
+                <p>What our clients say about our supervision services.</p>
             </div>
             <div class="testimonial-slider">
                 <div class="testimonial-slide active">
                     <div class="quote-icon">
                         <i class="fas fa-quote-right"></i>
                     </div>
-                    <p class="testimonial-content">"Hexa Builds transformed our vision into reality with their innovative approach and attention to detail. Their team delivered our luxury villa project on time and exceeded our expectations in every aspect."</p>
+                    <p class="testimonial-content">"Hexa Builds' supervision team was instrumental in keeping our villa project on track. Their daily oversight of the contractors prevented costly mistakes and ensured the quality we expected. Their detailed reports kept us informed at every stage."</p>
                     <div class="client-info">
                         <div class="client-img">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ahmed Al Maktoum">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" alt="Ahmed Al Maktoum">
                         </div>
                         <div class="client-name">
                             <h4>Ahmed Al Maktoum</h4>
@@ -1080,10 +1317,10 @@
                     <div class="quote-icon">
                         <i class="fas fa-quote-right"></i>
                     </div>
-                    <p class="testimonial-content">"The professionalism and expertise of Hexa Builds made our commercial tower project a seamless experience. Their ability to solve complex challenges while maintaining design integrity was impressive."</p>
+                    <p class="testimonial-content">"As developers, we rely on Hexa Builds to be our eyes and ears on site. Their ability to identify potential issues before they become problems has saved us significant time and money across multiple projects. Their contractor management is exceptional."</p>
                     <div class="client-info">
                         <div class="client-img">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=988&q=80" alt="Sarah Johnson">
                         </div>
                         <div class="client-name">
                             <h4>Sarah Johnson</h4>
@@ -1095,10 +1332,10 @@
                     <div class="quote-icon">
                         <i class="fas fa-quote-right"></i>
                     </div>
-                    <p class="testimonial-content">"Working with Hexa Builds on our resort project was a game-changer. Their creative solutions and commitment to sustainability resulted in a property that stands out in Dubai's competitive hospitality market."</p>
+                    <p class="testimonial-content">"The Hexa Builds team provided outstanding supervision for our resort project. Their rigorous quality control processes ensured every detail met our high standards. Their professional handling of contractor relations was particularly impressive."</p>
                     <div class="client-info">
                         <div class="client-img">
-                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Raj Patel">
+                            <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Raj Patel">
                         </div>
                         <div class="client-name">
                             <h4>Raj Patel</h4>
@@ -1120,11 +1357,11 @@
         <div class="container">
             <div class="section-title">
                 <h2>Get In Touch</h2>
-                <p>Ready to start your project? Contact us today to discuss how we can bring your vision to life.</p>
+                <p>Contact us to discuss how our supervision services can benefit your next project.</p>
             </div>
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3>Let's Build Something Amazing Together</h3>
+                    <h3>Let's Discuss Your Project Needs</h3>
                     <div class="contact-details">
                         <div class="contact-item">
                             <div class="contact-icon">
@@ -1171,10 +1408,10 @@
                             <input type="email" class="form-control" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject">
+                            <input type="text" class="form-control" placeholder="Project Type">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                            <textarea class="form-control" placeholder="How can we assist with your project?" required></textarea>
                         </div>
                         <button type="submit" class="submit-btn">Send Message</button>
                     </form>
@@ -1189,7 +1426,7 @@
             <div class="footer-container">
                 <div class="footer-col">
                     <h3>Hexa Builds</h3>
-                    <p>Transforming visions into exceptional built environments through innovative design and expert project consulting.</p>
+                    <p>Professional project supervision and consulting services in Dubai, ensuring your construction projects are completed successfully through expert contractor oversight.</p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
@@ -1210,16 +1447,16 @@
                 <div class="footer-col">
                     <h3>Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Architectural Design</a></li>
+                        <li><a href="#">Construction Supervision</a></li>
                         <li><a href="#">Project Management</a></li>
-                        <li><a href="#">Interior Design</a></li>
-                        <li><a href="#">Construction Consulting</a></li>
-                        <li><a href="#">Feasibility Studies</a></li>
+                        <li><a href="#">Quality Control</a></li>
+                        <li><a href="#">Contract Administration</a></li>
+                        <li><a href="#">Progress Monitoring</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>Newsletter</h3>
-                    <p>Subscribe to our newsletter for the latest updates and project insights.</p>
+                    <p>Subscribe for project insights and construction supervision tips.</p>
                     <form class="newsletter-form">
                         <div class="form-group">
                             <input type="email" class="form-control" placeholder="Your Email" required>
@@ -1229,7 +1466,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Hexa Builds. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: var(--accent);"></i> in Dubai</p>
+                <p>&copy; 2023 Hexa Builds. All Rights Reserved. | Professional Project Supervision in Dubai</p>
             </div>
         </div>
     </footer>
@@ -1324,7 +1561,7 @@
         
         // Animate on Scroll
         function animateOnScroll() {
-            const elements = document.querySelectorAll('.section-title, .about-img, .about-text, .service-card, .project-card, .contact-info, .contact-form');
+            const elements = document.querySelectorAll('.section-title, .about-img, .about-text, .service-card, .project-card, .contact-info, .contact-form, .value-img, .value-text');
             
             elements.forEach(element => {
                 const elementPosition = element.getBoundingClientRect().top;
@@ -1343,7 +1580,7 @@
         const contactForm = document.getElementById('contactForm');
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
+            alert('Thank you for your message! We will contact you shortly to discuss your project supervision needs.');
             this.reset();
         });
     </script>
